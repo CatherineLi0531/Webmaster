@@ -42,11 +42,12 @@ function openPage(pageName, elmnt, color) {
 document.getElementById("defaultOpen").click();
 
 
-
 var slideIndex = 1;
+var direction = 1; // 1 for "next," -1 for "prev"
 showSlides(slideIndex);
 
 function plusSlides(n) {
+  direction = n > 0 ? -1 : 1; // Set direction based on whether "next" or "prev" is clicked
   showSlides(slideIndex += n);
 }
 
@@ -57,22 +58,37 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  
+  var numberIndicator = document.getElementsByClassName("numbertext")[0];
+
   if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = slides.length;
   }
-  
+
   for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = 0; // Set opacity to 0 initially
+    slides[i].style.transform = `translateX(${direction * 10}%)`; // Move in from left or right based on direction
     slides[i].style.display = "none";
-    slides[i].classList.remove("active"); // Remove the active class from all slides
   }
-  
+
   slides[slideIndex - 1].style.display = "block";
-  slides[slideIndex - 1].classList.add("active"); // Add the active class to the current slide
+  slides[slideIndex - 1].offsetWidth; // Trigger reflow
+  slides[slideIndex - 1].style.transition = "opacity 0.8s ease-in-out, transform 0.8s ease-in-out"; // Transition for opacity and movement
+  slides[slideIndex - 1].style.opacity = 1; // Fade in
+  slides[slideIndex - 1].style.transform = "translateX(0)"; // Move in
+
+// Update number indicator
+numberIndicator.innerHTML = slideIndex + " / " + slides.length;
 }
+
+
+
+
+
+
+
 
       
  
@@ -155,3 +171,93 @@ let answers=document.querySelectorAll(".accordionn");
                 }
             })
         })
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Fade in elements on scroll
+  document.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.fade-in-element');
+
+      elements.forEach(function(element) {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementPosition < windowHeight * 0.8) {
+              element.style.opacity = 1;
+          } else {
+              element.style.opacity = 0;
+          }
+      });
+  });
+
+  // Smooth scroll to section when clicking on a link
+  const links = document.querySelectorAll('.scroll-link');
+
+  links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          window.scroll({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+          });
+      });
+  });
+});
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
+// Add an event listener to each tab link
+document.querySelectorAll('.tablink').forEach(tablink => {
+  tablink.addEventListener('click', scrollToTop);
+});
+
+function calculateSavings() {
+  const electricityBillInput = document.getElementById('electricityBill');
+  const resultContainer = document.getElementById('result');
+
+  const electricityBill = parseFloat(electricityBillInput.value.trim());
+
+  if (isNaN(electricityBill) || electricityBill <= 0) {
+    resultContainer.innerHTML = '<p>Please enter a valid positive number for your monthly electricity bill.</p>';
+    return;
+  }
+
+  // Assuming solar panels cover the entire electricity bill
+  const yearlySavings = electricityBill * 12;
+
+  resultContainer.innerHTML = `<p>Your potential yearly savings with solar panels: $${yearlySavings.toFixed(2)}</p>`;
+}
+
+function calculateWindSpeed() {
+  const beaufortScaleInput = document.getElementById('beaufortScale');
+  const resultContainer = document.getElementById('rresult');
+
+  const beaufortScale = parseInt(beaufortScaleInput.value.trim());
+
+  if (isNaN(beaufortScale) || beaufortScale < 0) {
+    resultContainer.innerHTML = '<p>Please enter a valid non-negative Beaufort Scale value.</p>';
+    return;
+  }
+
+  // Beaufort scale values and corresponding wind speeds
+  const beaufortValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const windSpeeds = [0, 1, 4, 7, 11, 16, 22, 28, 34, 41, 48, 56, 64];
+
+  // Find the corresponding wind speed based on the Beaufort scale
+  let windSpeed = windSpeeds[beaufortValues.indexOf(beaufortScale)];
+  
+  let suitabilityMessage = '';
+  if (windSpeed > 5) {
+    suitabilityMessage = 'Your location is suitable for a small wind energy system.';
+  } else {
+    suitabilityMessage = 'Your location may not be suitable for a small wind energy system.';
+  }
+  resultContainer.innerHTML = `<p>The estimated wind speed is approximately ${windSpeed} mph. ${suitabilityMessage}</p>`;
+}
+

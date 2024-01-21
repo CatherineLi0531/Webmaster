@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   line-height: 2;
   font-family: sans-serif;
-  background-color: #ffffff;
+  background-color: #fbfefb;
   
 }
 
@@ -87,6 +87,8 @@ body, html {
 
 .container {
   position: relative; 
+  width: 100%;
+  height: 100%;
   align-items: center;
   background-color: white;
 }
@@ -109,12 +111,12 @@ body, html {
   -webkit-user-select: none;
 }
 .next {
-  right: 5%;
+  right: -8%;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
-  left: 5%;
+  left: -8%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -123,59 +125,42 @@ body, html {
   background-color: rgba(118, 227, 140, 0.8);
 }
 
-.numbertext {
-  color: #000;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: -5%;
-  right: 50%;
-  background-color: white;
-}
 
 .mySlides {
   top: 5%;
+  left:-2.5%;
   opacity: 0; /* Start with opacity set to 0 */
   transition: opacity 0.8s ease-in-out; /* Add transition effect */
   flex: 1;
   padding: 20px;
-  background-color: #fff;
   border-radius: 10px;
+  position: relative; 
+  width: 100%;
+  height: 100%;
+}
+.mySlides img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* This property ensures the image maintains its aspect ratio */
 }
 
 .mySlides.active {
   opacity: 1; /* Set opacity to 1 for active slides */
 }
-
-.numbertext:hover{
-  background-color: #d5f5c2;
-}
-
-/* 
-footer {
-    background-color: #555;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-
-}
-
-footer p {
-    margin: 10px 0;
-    font-family: sans-serif;
-}
-
-footer a {
-    color: #ff6f61;
-    text-decoration: none;
-  margin-right:5px;
+/*
+.mySlides:hover::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
+  z-index: -1; 
 }
 */
+
 
 .container2 {
   display: flex;
@@ -335,11 +320,11 @@ h3{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 20%;
+  max-width: 80%;
 }
 
 .layout{
-    width: 1000px;
+    width: 600px;
     margin: auto;
 }
 .accordionn{
@@ -370,8 +355,79 @@ h3{
     display: block;
 }
 
+
+
+.fade-in-element {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+.numbertext {
+  color: #000;
+  font-size: 1.25vw;
+  padding: 8px 12px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the element */
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.parallax-container {
+  display: flex;
+  flex-direction: column;
+  height:200vh;
+}
+
+.parallax-layer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150vh;
+  padding: 20px;
+  /*background-color: #f0f0f0;  Adjust background color as needed */
+}
+
+.parallax-image {
+  width: 210%;
+  padding: 0% 5%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+#result {
+  margin-top: 20px;
+}
+#rresult {
+  margin-top: 20px;
+}
 footer {
   min-height: 50px;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+footer li{
+  list-style-type: inline;
 }
