@@ -509,7 +509,7 @@ input {
 .cta-button {
   padding: 10px 20px;
   font-size: 1.2em;
-  background-color: #2ecc71;
+  background-color: rgb(182, 177, 162);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -518,7 +518,7 @@ input {
 }
 
 .cta-button:hover {
-  background-color: #27ae60;
+  background-color: rgb(152, 148, 135);
 }
 
 @keyframes fadeIn {
