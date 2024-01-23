@@ -7,21 +7,27 @@
     <body>
     
        <div class="navbar">
-        <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">Home</button>
-        <button class="tablink" onclick="openPage('Clean Energy Programs', this, 'white')">Clean Energy Programs</button>
-        <button class="tablink" onclick="openPage('Home Modification', this, 'white')">Home Modification</button>
-        <button class="tablink" onclick="openPage('Cost', this, 'white')">Cost</button>
-        <button class="tablink" onclick="openPage('Tax Rebate Information', this, 'white')">Tax Rebate Information</button>
-        <button class="tablink" onclick="openPage('Green Living', this, 'white')">Green Living</button>
-        <button class="tablink" onclick="openPage('Sources', this, 'white')">Sources</button>
-        
-        <div class="TSA"> TSA WEBMASTER </div>
-       
+        <button class="tablink TSA" onclick="openPage('Go Green', this, 'white')" id="defaultOpen">GO GREEN</button>
+        <button class="tablink tabb" onclick="openPage('Home', this, 'white')" >Clean Energy</button>
+        <button class="tablink tabb" onclick="openPage('Clean Energy Programs', this, 'white')">Clean Energy Programs</button>
+        <button class="tablink tabb" onclick="openPage('Home Modification', this, 'white')">Home Modification</button>
+        <button class="tablink tabb" onclick="openPage('Cost', this, 'white')">Cost</button>
+        <button class="tablink tabb" onclick="openPage('Tax Rebate Information', this, 'white')">Tax Rebate Information</button>
+        <button class="tablink tabb" onclick="openPage('Green Living', this, 'white')">Green Living</button>
+        <button class="tablink tabb" onclick="openPage('Sources', this, 'white')">Sources</button>
         </div>
-       
+
+        <div id="Go Green"  class="tabcontent">
+          <div class="containeer">
+            <h1 class="heaader">Welcome to Go Green</h1>
+            <p class="subheader">Join us on a journey to make a difference. Choose green energy for a brighter and healthier future.</p>
+            <a href="#" onclick="openPage('Home', document.getElementsByClassName('tabb')[1], 'white')" class="cta-button">Learn More</a>
+          </div>
+        </div>
+        </div>
+
         <div id="Home" class="tabcontent">
-          <h1 class="header">CLEAN ENERGY</h1>
-   
+          <h1 class="header" >CLEAN ENERGY  </h1>
           <h3 >What is Clean Energy?</h3>
             <p >
                 Clean energy refers to energy sources and technologies that have minimal negative impact on the environment and produce little to no greenhouse gas emissions. The primary goal of clean energy is to reduce environmental pollution and mitigate the effects of climate change. Clean energy sources are sustainable and renewable, meaning they can be naturally replenished and are not depleted when used. Some common examples of clean energy sources include:
@@ -163,16 +169,15 @@
               
           </div>
           <footer class="page-footer">
-            <li><a href="social_media_link">Connect with us on social media</a></li>
-                <li><a href="report_problem_link">Report a problem</a></li>
-                <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-                <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-                <li><a href="mailing_address_link">Find a mailing address</a></li>
-                <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-                <li><a href="access_libraries_link">Access our libraries</a></li>
-                <li><a href="foia_request_link">Submit a FOIA request</a></li>
-                <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-          </footer>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+        </footer>
         </div>
         
         <div id="Clean Energy Programs" class="tabcontent">
@@ -223,24 +228,18 @@
 
               <p>These programs aim to empower homeowners to make sustainable choices, save energy, and contribute to environmental conservation. By adopting energy-efficient practices and considering renewable energy options, homeowners can play a role in reducing their environmental impact.
               </p>
-             
-            <!--
-              <footer>
-                <p>TSA WEBMASTER </p>
-              </footer>
-            -->
+
           </div>
           <footer class="page-footer">
-            <li><a href="social_media_link">Connect with us on social media</a></li>
-                <li><a href="report_problem_link">Report a problem</a></li>
-                <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-                <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-                <li><a href="mailing_address_link">Find a mailing address</a></li>
-                <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-                <li><a href="access_libraries_link">Access our libraries</a></li>
-                <li><a href="foia_request_link">Submit a FOIA request</a></li>
-                <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-          </footer>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+        </footer>
          </div>
 
         <div id="Cost" class="tabcontent">
@@ -295,15 +294,24 @@
             <h3 class="fade-in-element">Rebates</h3>
             <p>Many homeowners can sell any excess energy their solar and wind systems produce back to their utility providers and, therefore, pay off their renewable energy investments more quickly. Most states have established “net metering” rules for customers who generate excess electricity through solar, wind, or other systems and feed it into the grid.</p>
         </div>
-        <br><br><br>
+        <br> <footer class="page-footer">
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+      </footer>
         </div>  
         
         <div id="Home Modification" class="tabcontent">
           <h1 class="header">HOME MODIFICATIONS</h1>
           <div class="parallax-container">
             
-            <section class="parallax-layer layer1">
-              <div class="content">
+            <section class="parallax-layer">
+              <div class="contentt">
               <img src="geothermal.jpeg" alt="Image 1" class="parallax-image ">
               </div>
               <div class="content fade-in-element">
@@ -321,8 +329,8 @@
               </div>
             </section>
         
-            <section class="parallax-layer layer2">
-              <div class="content">
+            <section class="parallax-layer">
+              <div class="contentt">
               <img src="insulation.png" alt="Image 2" class="parallax-image">
               </div>
               <div class="content  fade-in-element">
@@ -338,8 +346,8 @@
               </div>
             </section>
 
-            <section class="parallax-layer layer3">
-              <div class="content">
+            <section class="parallax-layer">
+              <div class="contentt">
               <img src="solar.jpeg" alt="Image 3" class="parallax-image ">
               </div>
               <div class="content fade-in-element">
@@ -356,8 +364,8 @@
               </div>
             </section>
 
-            <section class="parallax-layer layer4">
-              <div class="content">
+            <section class="parallax-layer">
+              <div class="contentt">
               <img src="watersense.jpeg" alt="Image 4" class="parallax-image ">
               </div>
               <div class="content fade-in-element">
@@ -371,8 +379,8 @@
               </div>
             </section>
 
-            <section class="parallax-layer layer5">
-              <div class="content">
+            <section class="parallax-layer">
+              <div class="contentt">
               <img src="ethanoll.png" alt="Image 5" class="parallax-image ">
               </div>
               <div class="content fade-in-element">
@@ -388,29 +396,29 @@
         
           </div>
           <footer class="page-footer">
-            <li><a href="social_media_link">Connect with us on social media</a></li>
-                <li><a href="report_problem_link">Report a problem</a></li>
-                <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-                <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-                <li><a href="mailing_address_link">Find a mailing address</a></li>
-                <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-                <li><a href="access_libraries_link">Access our libraries</a></li>
-                <li><a href="foia_request_link">Submit a FOIA request</a></li>
-                <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-          </footer>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+        </footer>
           </div>
 
         <div id="Tax Rebate Information" class="tabcontent">
           <h1 class="header">Tax Rebate Information</h1>
+                   
           <section>
             <h3>What is a Tax Credit?</h3>
             <p>A tax credit is a dollar-for-dollar reduction in the amount of income tax you would otherwise owe. For example, claiming a $1,000 federal tax credit reduces your federal income taxes due by $1,000.</p>
           </section>
         
-          <section>
+          
             <h3>Federal Solar Tax Credit Explained</h3>
             <p>The federal residential solar energy credit is a tax credit that can be claimed on federal income taxes for a percentage of the cost of a solar PV system paid for by the taxpayer. This credit applies to systems installed between January 1, 2017, and December 31, 2034.</p>
-        
+            <section class="cul">
             <ul>
               <li><strong>Credit Percentage:</strong>
                 <ul>
@@ -418,6 +426,8 @@
                   <li>30% for systems installed between 2022-2032.</li>
                   <li>26% for systems installed in 2033.</li>
                   <li>22% for systems installed in 2034.</li>
+                  
+                
                 </ul>
               </li>
               <li><strong>Eligibility Criteria:</strong>
@@ -426,20 +436,21 @@
                   <li>Located at a residence in the United States.</li>
                   <li>Ownership of the solar PV system (not leased or purchased electricity).</li>
                 </ul>
+                
               </li>
               <li><strong>Expenses Included:</strong>
                 <ul>
                   <li>Solar PV panels or cells.</li>
                   <li>Contractor labor costs, including permitting fees.</li>
-                  <li>Balance-of-system equipment (inverters, mounting equipment).</li>
                   <li>Energy storage devices with a capacity rating of 3 kWh or greater (for systems installed after December 31, 2022).</li>
                   <li>Sales taxes on eligible expenses.</li>
                 </ul>
               </li>
             </ul>
           </section>
-        
-          <section>
+          
+          <div class="boo">
+          <div class="information-column">
             <h3>How Other Incentives Affect the Federal Tax Credit</h3>
         
             <ul>
@@ -467,22 +478,83 @@
                 </ul>
               </li>
             </ul>
-          </section>
+          </div>
+          <div class="incentive-column">
+          <div class="conttainer">
+            <h3>What's my solar incentive?</h3>
+            <label for="stateDropdown">Select State:</label>
+            <select id="stateDropdown">
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="Florida">Florida</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Washington">Washington</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>              
+            </select>
+            <button onclick="calculateRebate()">Go</button>
+            <div><p>You may not find information on your state if it does not have significant solar benifits. 17/50 states offer significant solar benefits.</p></div>
+            <div id="resultt"></div>
+          </div>
+        </div>
+        </div>
         
           <section>
             <p><strong>Important Note:</strong> The Tax Cuts and Jobs Act of 2017 placed a $10,000 limit on state and local tax (SALT) deduction through 2025. Therefore, if a homeowner is still paying more than $10,000 in SALT after claiming a state tax credit, the state tax credit benefit would not effectively be reduced by the federal tax rate, as it would not impact federal taxes (due to the SALT limit).</p>
           </section>
           <footer class="page-footer">
-            <li><a href="social_media_link">Connect with us on social media</a></li>
-                <li><a href="report_problem_link">Report a problem</a></li>
-                <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-                <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-                <li><a href="mailing_address_link">Find a mailing address</a></li>
-                <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-                <li><a href="access_libraries_link">Access our libraries</a></li>
-                <li><a href="foia_request_link">Submit a FOIA request</a></li>
-                <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-          </footer>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+        </footer>
         
         </div>
 
@@ -537,34 +609,51 @@
             </div>
         </div>
         <footer class="page-footer">
-          <li><a href="social_media_link">Connect with us on social media</a></li>
-              <li><a href="report_problem_link">Report a problem</a></li>
-              <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-              <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-              <li><a href="mailing_address_link">Find a mailing address</a></li>
-              <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-              <li><a href="access_libraries_link">Access our libraries</a></li>
-              <li><a href="foia_request_link">Submit a FOIA request</a></li>
-              <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-        </footer>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+          <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+      </footer>
         </div>
 
         <div id="Sources" class="tabcontent">
           <h1 class="header">Sources</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Alternative Fuels Data Center. "Ethanol Fuel Basics." AFDC, <a href="afdc.energy.gov/fuels/ethanol_fuel_basics.html">afdc.energy.gov/fuels/ethanol_fuel_basics.html</a>.</p>
+          <p>April 12, Lauren Krueger, and 2022. “7 Simple Ways to Go Green with Your Cleaning Routine.” Better Homes & Gardens, <a href="www.bhg.com/homekeeping/house-cleaning/tips/eco-friendly-cleaning-ideas/">www.bhg.com/homekeeping/house-cleaning/tips/eco-friendly-cleaning-ideas/</a>.</p>
+          <p>Dec. 17, Nick GerhardtUpdated:, and 2023. “64 Ways to Reuse Things You Normally Toss.” Family Handyman, <a href="www.familyhandyman.com/list/incredible-uses-for-things-you-normally-toss/">www.familyhandyman.com/list/incredible-uses-for-things-you-normally-toss/</a>. Accessed 18 Jan. 2024.</p>
+          <p>Forbes. “How Much Do Solar Panels Save the Average Homeowner?” Forbes Magazine, <a href="www.forbes.com/home-improvement/solar/how-much-solar-panels-save/">www.forbes.com/home-improvement/solar/how-much-solar-panels-save/</a>.</p>
+          <p>Green Clean Guide. "Calculate Your Carbon Footprint." Green Clean Guide, <a href="greencleanguide.com/calculate-your-carbon-footprint/#:~:text=Electricity%20%3A%20Input%20value%20(in%20KWh,in%20(Kg%20of%20CO2)">greencleanguide.com/calculate-your-carbon-footprint/#:~:text=Electricity%20%3A%20Input%20value%20(in%20KWh,in%20(Kg%20of%20CO2)</a>.</p>
+          <p>“Recycling Center Search - Earth911.com.” Search.earth911.com, <a href="search.earth911.com/?utm_source=earth911-headerfooter&utm_medium=secondary-nav&utm_campaign=advanced-search/">search.earth911.com/?utm_source=earth911-headerfooter&utm_medium=secondary-nav&utm_campaign=advanced-search/</a>.</p>
+          <p>United States Environmental Protection Agency. "Clean Energy Programs." EPA, <a href="www.epa.gov/energy/clean-energy-programs">www.epa.gov/energy/clean-energy-programs</a>.</p>
+          <p>U.S. Energy Information Administration. "Geothermal Heat Pumps." EIA, <a href="www.eia.gov/energyexplained/geothermal/geothermal-heat-pumps.php#:~:text=Geothermal%20heat%20pumps%20use%20the,the%20process%20in%20the%20summer">www.eia.gov/energyexplained/geothermal/geothermal-heat-pumps.php#:~:text=Geothermal%20heat%20pumps%20use%20the,the%20process%20in%20the%20summer</a>.</p>
+          <p>United States Environmental Protection Agency. "Learn About Energy and Its Impact on the Environment." EPA, <a href="www.epa.gov/energy/learn-about-energy-and-its-impact-environment">www.epa.gov/energy/learn-about-energy-and-its-impact-environment</a>.</p>
+          <p>United States Environmental Protection Agency. "Power Profiler." eGRID, <a href="www.epa.gov/egrid/power-profiler#/ERCT">www.epa.gov/egrid/power-profiler#/ERCT</a>.</p>
+          <p>United States Environmental Protection Agency. "WaterSense Products." WaterSense, <a href="www.epa.gov/watersense/watersense-products">www.epa.gov/watersense/watersense-products</a>.</p>
+          <p>U.S. Department of Energy. "Homeowner's Guide to Going Solar." Energy.gov, <a href="www.energy.gov/eere/solar/homeowners-guide-going-solar">www.energy.gov/eere/solar/homeowners-guide-going-solar</a>.</p>
+          <p>U.S. Department of Energy. "Insulation." Energy.gov, <a href="www.energy.gov/energysaver/insulation">www.energy.gov/energysaver/insulation</a>.</p>
+          <p>U.S. Department of Energy. “Residential Renewable Energy.” Energy.Gov, <a href="www.energy.gov/energysaver/residential-renewable-energy">www.energy.gov/energysaver/residential-renewable-energy</a>.</p>
+          <p>"Walmart." Walmart, <a href="https://www.walmart.com/ip/Leke-Leaves-Plant-Wall-Sticker-Vinyl-Decal-Home-Art-Mural-12x36inch-Green/2771681503">www.walmart.com/ip/Leke-Leaves-Plant-Wall-Sticker-Vinyl-Decal-Home-Art-Mural-12x36inch-Green/2771681503</a>. Accessed 22 Jan. 2024.</p>
+          <p>“What Can I Recycle? Get Real-Time ♻️ Information for Your Community.” The Recycling Partnership, <a href="recyclingpartnership.org/what-can-i-recycle/">recyclingpartnership.org/what-can-i-recycle/</a>. Accessed 22 Jan. 2024.</p>
+          <p>Wikipedia Contributors. “Sustainable Living.” Wikipedia, Wikimedia Foundation, 2 Apr. 2019, <a href="en.wikipedia.org/wiki/Sustainable_living">en.wikipedia.org/wiki/Sustainable_living</a>.</p>
+          
           <footer class="page-footer">
-            <li><a href="social_media_link">Connect with us on social media</a></li>
-                <li><a href="report_problem_link">Report a problem</a></li>
-                <li><a href="epa_regulations_link">Comment on EPA regulations</a></li>
-                <li><a href="locate_employee_link">Locate an EPA employee, office, or lab</a></li>
-                <li><a href="mailing_address_link">Find a mailing address</a></li>
-                <li><a href="subscribe_link">Subscribe to news releases, blogs, newsletters, and alerts</a></li>
-                <li><a href="access_libraries_link">Access our libraries</a></li>
-                <li><a href="foia_request_link">Submit a FOIA request</a></li>
-                <li><a href="resources_link">Can't find the information you are looking for? Try these resources</a></li>
-          </footer>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Connect with us on social media</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Comment on EPA regulations</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Report a problem</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Submit a FOIA request</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Locate an EPA employee, office, or lab</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Find a mailing address</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Access our libraries</a></p>
+            <p><a href="https://www.epa.gov/aboutepa/forms/contact-epa#socmed">Can't find the information you are looking for? Try these resources</a></p>
+        </footer>
         </div>
-  
+
+
+      
     <script src="script.js"> </script>
     </body>
 </html>

@@ -37,9 +37,9 @@ function openPage(pageName, elmnt, color) {
   elmnt.classList.add("activeTab");
 }
 
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
 
 
 var slideIndex = 1;
@@ -258,6 +258,77 @@ function calculateWindSpeed() {
   } else {
     suitabilityMessage = 'Your location may not be suitable for a small wind energy system.';
   }
-  resultContainer.innerHTML = `<p>The estimated wind speed is approximately ${windSpeed} mph. ${suitabilityMessage}</p>`;
+  resultContainer.innerHTML = `<p>The estimated wind speed is approximately ${windSpeed} m/s. ${suitabilityMessage}</p>`;
 }
 
+function calculateRebate() {
+  // Get selected state from the dropdown
+  var stateDropdown = document.getElementById("stateDropdown");
+  var selectedState = stateDropdown.value;
+
+  // Get rebate information based on the selected state
+  var rebateInfo = getRebateInfo(selectedState);
+
+  // Display the result
+  var resultElement = document.getElementById("resultt");
+  resultElement.textContent = rebateInfo;
+}
+
+function getRebateInfo(state) {
+  // Replace this with actual rebate information for each state
+  var rebateMap = {
+    "Alabama": "",
+  "Alaska": "",
+  "Arizona": "Property tax exemption: Arizona residents who install solar panels won’t have to pay taxes on the increased value of their home. Residential Solar and Wind Energy Systems Tax Credit: Arizona offers a statewide tax credit worth 25 percent of the cost of your solar panels, capped at $1,000. Sales tax exemption: If you purchase solar panels in Arizona, you won’t have to pay sales tax.",
+  "Arkansas": "",
+  "California": "Property tax exemption: If you install solar panels before the end of 2024, you will be exempt from paying increased property taxes. Sales and use tax exemption: Solar panels and other solar equipment are exempt from sales and use tax in California. Self-Generation Incentive Program: If you install a solar battery for your home or business, you can qualify for a rebate valued at 15–20 percent of the battery cost.",
+  "Colorado": "100% sales and use tax exemption for solar and battery technologies.100% property tax exemption for the value added by solar and battery technologies. Rebate worth 25% of solar project costs up to $2,500",
+  "Connecticut": "100% sales and use tax exemption for solar and battery technologies. 100% property tax exemption for the value added by solar and battery technologies",
+  "Delaware": "",
+  "Florida": "Property tax exemption: Florida residents who install solar panels won’t have to pay more in property taxes as a result of the increase to their home value. Sales tax exemption: Solar energy systems are exempt from sales tax in Florida.",
+  "Georgia": "Solar easement laws: Georgia’s solar easement law protects your access to sunlight. For example, a tree on your neighbor’s property cannot reach a height where it blocks your access to sunlight because of this law. All easements must be documented in writing in Georgia.",
+  "Hawaii": "",
+  "Idaho": "",
+  "Illinois": "Value added by solar won’t raise your property taxes. Awards participants one renewable energy credit (REC) for every 1,000 kWh of solar production for 15 years, which can be sold on marketplaces for cash. Residential solar owners are compensated for their excess production at retail electricity rates.",
+  "Indiana": "",
+  "Iowa": "",
+  "Kansas": "",
+  "Kentucky": "",
+  "Louisiana": "",
+  "Maine": "",
+  "Maryland": "100% exemption from state sales tax on solar purchases. A 100% property tax exemption for the home value added by solar energy equipment. Rebate worth up to $1,000 (pending legislation seeks to increase value to $5,000).",
+  "Massachusetts": "Solar Massachusetts Renewable Target (SMART): The SMART program pays customers of Massachusetts utilities a fixed amount for every kilowatt-hour of energy residential solar panels produce. aSupplier rebates: There are a variety of electricity suppliers in Massachusetts offering rebates based on the size of your solar system. Reach out to your supplier for details.",
+  "Michigan": "",
+  "Minnesota": "Solar owners are compensated at retail rates for excess production exported onto the grid. 100% state sales tax exemption on solar equipment. Upfront rebate worth $0.29 per kWh of expected annual average production, up to $5,000.",
+  "Mississippi": "",
+  "Missouri": "",
+  "Montana": "",
+  "Nebraska": "",
+  "Nevada": "Partial property and sales tax exemptions: The Renewable Energy Tax Abatement program in Nevada offers a partial sales and use tax as well as property tax reductions for renewable energy installations, including solar panels. Solar owners can get a 55 percent property tax abatement for 20 years after installation and will only have to pay a 2.6 percent sales and use tax on their panels.",
+  "New Hampshire": "",
+  "New Jersey": "100% state sales tax exemption for solar purchases. 100% property tax exemption for the value added by solar PV systems. Residential solar owners are compensated for their excess production at retail electricity rates.",
+  "New Mexico": "",
+  "New York": "NY-Sun Program: NY-Sun offers several financial incentives if you install solar panels. This initiative funds New York’s Megawatt Block Incentive (a rebate program offering money based on the size of your system) and the state’s community solar program. Residential Solar Tax Credit: New York’s state solar tax credit offers 25 percent of the cost of your solar panels in credit, with a cap of $5,000.",
+  "North Carolina": "Property tax exemption: North Carolina residents who own a solar system that is not used to generate income or in connection with a business are exempt from paying increased property taxes on their solar panels.",
+  "North Dakota": "",
+  "Ohio": "Exemption for state sales tax on solar purchases.SRECs worth $4.25 per MWh of generation.Compensation for excess solar generation exported onto grid, varies by utility provider.",
+  "Oklahoma": "",
+  "Oregon": "",
+  "Pennsylvania": "",
+  "Rhode Island": "",
+  "South Carolina": "",
+  "South Dakota": "",
+  "Tennessee": "",
+  "Texas": "Austin Energy Residential Solar Rebate Program: If you live in Austin and complete Austin Energy’s solar education course, you may be eligible for a $2,500 rebate. Property tax exemption: If you install solar panels in Texas, you can apply for exemption from paying increased property taxes.",
+  "Utah": "",
+  "Vermont": "",
+  "Virginia": "Property tax exemption: If you own solar panels, you may qualify for a partial or total exemption on higher property taxes as a result of your property value increasing because of your solar system.",
+  "Washington": "",
+  "West Virginia": "",
+  "Wisconsin": "",
+  "Wyoming": ""
+  };
+
+  // Return rebate information for the selected state
+  return rebateMap[state] || "Rebate information not available for this state.";
+}
